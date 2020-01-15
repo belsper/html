@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>css 6일차 4번 파일</title>
+
+    <style>
+        div {
+            border: 3px solid red;
+            padding: 5px;
+        }
+
+        #img01 { float: left; }
+
+        /* float을 사용 시 부모 태그 영역을 벗어나는 상황이 발생되는데, 이것을 막는 방법 2가지 */
+        /* 1. 부모 태그에 overflow: auto를 사용하는 방법 */
+            /* 스크롤이 발생할 가능성이 있음 */
+        /* 2. 부모 태그에 ::after 를 추가하여 화면에 그려진 이후 동작을 설정하는 방법(추천되는 방식) */
+            /* clear: both, display: table, content: "" 속성을 사용해야 함 */
+        #div02 {
+            /* overflow : 영역을 벗어나는 컨텐츠의 화면 출력 방식을 설정하는 CSS 속성 */
+            overflow: auto;
+        }
+
+        #img02 { float: left; }
+
+        #img03 { float: left; }
+        
+        #div03::after {
+            clear: both;
+            display: table;
+            content: "";
+        }
+    </style>
+
+</head>
+<body>
+    <div id="div01">
+        <p>국가는 전통문화의 계승·발전과 민족문화의 창달에 노력하여야 한다.</p>
+        <img src="./pic/001/001.jpg" alt="" id="img01">
+        <p>대통령은 전시·사변 또는 이에 준하는 국가비상사태에 있어서 병력으로써 군사상의 필요에 응하거나 공공의 안녕질서를 유지할 필요가 있을 때에는 법률이 정하는 바에 의하여 계엄을 선포할 수 있다</p>
+    </div>
+
+    <br><br><br>
+    <br><br><br>
+    <br><hr><br>
+
+    <div id="div02">
+        <p>국가는 전통문화의 계승·발전과 민족문화의 창달에 노력하여야 한다.</p>
+        <img src="./pic/001/001.jpg" alt="" id="img02">
+        <p>대통령은 전시·사변 또는 이에 준하는 국가비상사태에 있어서 병력으로써 군사상의 필요에 응하거나 공공의 안녕질서를 유지할 필요가 있을 때에는 법률이 정하는 바에 의하여 계엄을 선포할 수 있다</p>
+    </div>
+
+    <br><hr><br>
+
+    <div id="div03">
+        <p>국가는 전통문화의 계승·발전과 민족문화의 창달에 노력하여야 한다.</p>
+        <img src="./pic/001/001.jpg" alt="" id="img03">
+        <p>대통령은 전시·사변 또는 이에 준하는 국가비상사태에 있어서 병력으로써 군사상의 필요에 응하거나 공공의 안녕질서를 유지할 필요가 있을 때에는 법률이 정하는 바에 의하여 계엄을 선포할 수 있다</p>
+    </div>
+
+</body>
+</html>
