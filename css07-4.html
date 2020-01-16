@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS 7일차 4번파일</title>
+
+    <style>
+        header {
+            width: 80%;
+            margin: 0 auto;
+            background-color: #069;
+            padding: 10px;
+        }
+
+        header nav {
+            width: 60%;
+            float: right;
+        }
+
+        header::after {
+            clear: both;
+            display: table;
+            content: "";
+        }
+
+        nav ul{
+            list-style-type: none;
+        }
+
+        nav ul li{
+            display: inline;
+            margin: 15px;
+        }
+
+        nav ul li a{
+            color: white;
+            text-decoration: none;
+        }
+
+        p {
+            font-size:15px;
+            line-height:20px;
+        }
+
+        h1{
+            font-size:2em;	
+        }
+
+        section{
+            width: 80%;
+            margin: 0 auto;
+            border: 5px solid #333;
+            padding: 5px;
+        }
+
+        section article {
+            width: 30%;
+            height: 650px;
+            float: left;
+            margin: 5px;
+            padding: 5px;
+            border: 1px dotted #333;
+        }
+
+        article h3 {
+            padding-left: 30px;
+        }
+
+        section::after {
+            clear: both;
+            display: table;
+            content: "";
+        }
+
+        footer {
+            width: 80%;
+            margin: 0 auto;
+            padding: 10px;
+            background-color: #333;
+            color: white;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#">애완견 종류</a></li>
+                <li><a href="#">입양하기</a></li>
+                <li><a href="#">건강돌보기</a></li>
+                <li><a href="#">더불어살기</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>애완견 종류</h2>
+            <article>
+                <h3>활달한 강아지</h3>
+                <dl>
+                    <dt>요크셔테리어</dt>
+                    <dd>생기있고 활달한 성질을 가지고 있으며....</dd>
+            
+                    <dt>말티즈</dt>
+                    <dd>애정이 많고, 충실하며 활발한 성격을 소유하고 있다...</dd>
+            
+                    <dt>포메라이언</dt>
+                    <dd>활기차고 명랑한 개로 유명하고, 걷는 모습이 우아하다....</dd>
+            
+                    <dt>골든 리트리버</dt>
+                    <dd>이 견종은 충성심이 강하고 성격이 활달하여 어린아이나 여성이 상대하기 적합한 견종이다....</dd>
+                </dl>
+            </article>
+
+            <article>
+                <h3>온순한 강아지</h3>
+                <dl>
+                    <dt>쉬즈</dt>
+                    <dd>얼굴에서 풍기는 모습처럼 온순. 쉽게 친숙해지고, 우호적이며...</dd>
+
+                    <dt>퍼그</dt>
+                    <dd>매우 사려가 깊고 사랑스러운 견종이며 그다지 손질이 필요하지 않고...</dd>
+
+                    <dt>래브라도 리트리버</dt>
+                    <dd>침착하고 영리하며 어린이들을 안심하고 맡길 수 있다....</dd>
+                </dl>
+            </article>
+
+            <article>
+                <h3>사납지만 복종적인 강아지</h3>
+                <dl>
+                    <dt>미니어쳐핀셔</dt>
+                    <dd>경계심이 강하고, 영리하며, 작은 몸짓에 비해 매우 용감하다....</dd>
+
+                    <dt>푸들</dt>
+                    <dd>사납진 않으나, 상당히 복종적이며, 지능지수가 애완견종 중 가장 뛰어나다</dd>
+
+                    <dt>폭스테리어</dt>
+                    <dd>가정에서 키우기에 적합한 품종이다.....</dd>
+                </dl>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <p>main by yangjung</p>
+    </footer>
+</body>
+</html>
