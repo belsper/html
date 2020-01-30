@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS 10일차 2번파일</title>
+    
+    <style>
+        /* 연습문제 1 */
+        body {
+            padding-top:50px;
+            padding-left:50px;
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+            background: green;
+            border: 1px solid black;
+            /* 사각형의 모서리 처리 */
+            border-radius: 5px;
+            -webkit-transition: background 5s;
+            -moz-transition: background 5s;
+            -o-transition: background 5s;
+            transition: background 5s;
+        }
+
+        .box:hover {
+            background:yellow;
+        }
+
+        /* 연습문제 2 */
+        #div02 {
+            width:500px;
+            /* maigin을 상하는 px 추가, 좌우측은 중앙 정렬*/
+            margin:50px auto;
+        }
+
+        #div02 .photo {
+            border:1px solid #ccc;
+        }
+
+        #div02 .photo:hover {
+            border: 1px solid black;
+            /* border-radius: 10px; */
+            -moz-transform: rotate(20deg);
+            -ms-transform: rotate(20deg);
+            -o-transform: rotate(20deg);
+            -webkit-transform: rotate(20deg);
+            transform: rotate(20deg);
+
+            animation-name: test;
+            animation-duration: 2s;
+        }
+
+        @keyframes test {
+            from {
+                border-radius: 0;
+            }
+            to {
+                border-radius: 30px;
+            }
+        }
+
+        /* 연습문제 3 */
+
+        #div03 .photo {
+            margin-top:50px;	
+            margin-left:100px;
+        }
+
+        #div03 .photo:hover {
+            -webkit-transform-origin: left top;
+            -moz-transform-origin: left top;
+            -ms-transform-origin: left top;
+            -o-transform-origin: left top;
+            transform-origin: left top;
+
+            -webkit-transform: scale(1.5);
+            -moz-transform: scale(1.5);
+            -ms-transform: scale(1.5);
+            -o-transform: scale(1.5);
+            transform: scale(1.5);
+
+            -webkit-transition: all 1s;
+            -moz-transition: all 1s;
+            -o-transition: all 1s;
+            transition: all 1s;
+            box-shadow: 5px 5px 3px black;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="div01">
+        <div class="box"></div>
+    </div>
+
+    <br><hr><br>
+
+    <div id="div02">
+        <img src="./images/005.jpg" class="photo">
+    </div>
+
+    <br><hr><br>
+
+    <div id="div03">
+        <img src="./images/002.jpg" width="250" height="188" class="photo">
+    </div>
+  
+</body>
+</html>
