@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS 12일차 2번파일</title>
+
+    <style>
+        * { box-sizing: border-box; }
+
+        header {
+            background-color: mediumvioletred;
+            color: #ffffff;
+            /* 테두리 선과 내부 컨텐츠 영역과의 기본 공간을 상하좌우에 15px씩 줌 */
+            padding: 15px;
+        }
+
+        main::after {
+            /* 자식 태그가 float 속성을 사용했을 경우 float속성을 삭제하기 위한 공식 */
+            clear: both;
+            display: table;
+            content: "";
+        }
+
+        aside {
+            float: left;
+            padding: 15px 0;
+            width: 25%;
+        }
+
+        section {
+            float: left;
+            padding: 15px;
+            width: 50%;
+        }
+
+        .menu ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+    
+        /* CSS 선택자 중 공백문자(' ')는 자손 선택자임 */
+        .menu li {
+            padding: 8px;
+            margin-bottom: 7px;
+            background-color: deepskyblue;
+            color: white;
+            box-shadow: 0 1px 3px rgb(0, 0, 0), 0 1px 2px rgb(0, 0, 0);
+        }
+
+        .menu li:hover { background-color: dodgerblue; }
+
+        .right {
+            background-color: deepskyblue;
+            padding: 15px;
+            color: white;
+            text-align: center;
+            box-shadow: 0 1px 3px rgb(0, 0, 0), 0 1px 2px rgb(0, 0, 0);
+        }
+
+        footer {
+            background-color: royalblue;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+
+        @media screen and (max-width: 576px) {
+            aside { width: 100%; }
+            section { width: 100%; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>header</h1>
+    </header>
+    <main>
+        <aside class="menu">
+            <ul>
+                <li>The Flight</li>
+                <li>The City</li>
+                <li>The Island</li>
+                <li>The Food</li>
+            </ul>
+        </aside>
+        <section class="contents">
+            <h1>the City</h1>
+            <p>Chania is the capital of the Chania region on the island of Crete. The city can be divided is two parts, the old town and th modern city.</p>
+        </section>
+        <aside>
+            <div class="right">
+                <h2>What?</h2>
+                <p>Chania is a city on the island of Crete</p>
+                <h2>Where?</h2>
+                <p>Crete is a Greek island in the Mediterranean Sea</p>
+                <h2>How?</h2>
+                <p>You can reach Chania airport form all over Europe</p>
+            </div>
+        </aside>
+    </main>
+    <footer>
+        <p>화면 너비에 따라서 웹 사이트가 변경 됩니다.</p>
+    </footer>
+</body>
+</html>
